@@ -78,3 +78,23 @@ console.log(`COM JUROS: ${contaPoup.getSaldoJuros()}`);
 contaPoup.depositar(30);
 contaPoup.sacar(20);
 console.log(` DEPOIS: ${contaPoup.getSaldo()}`); 
+
+class Banco {
+    contas: object[] = [];
+
+    constructor(conta: object ) {
+        this.contas = [conta]
+    }
+
+    addContas(conta: object) {
+     this.contas.push(conta)
+   }
+
+   listarContas() {
+    console.log(this.contas);
+   }
+}
+
+const banco = new Banco(contaBanc);
+banco.addContas(contaPoup)
+banco.listarContas()
